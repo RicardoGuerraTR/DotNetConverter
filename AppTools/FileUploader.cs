@@ -7,7 +7,7 @@ using System;
 using System.IO;
 using System.Threading.Tasks;
 
-namespace FileUploader
+namespace FileUploader.AppTools
 {
     internal class FileUploader
     {
@@ -73,7 +73,7 @@ namespace FileUploader
 
                 if (credentialProfileStoreChain.TryGetAWSCredentials(awsProfile, out awsCredentials))
                 {
-                    using (var client = new AmazonS3Client(awsCredentials, Amazon.RegionEndpoint.USEast1))
+                    using (var client = new AmazonS3Client(awsCredentials, RegionEndpoint.USEast1))
                     {
                         foreach (string file in files)
                         {
