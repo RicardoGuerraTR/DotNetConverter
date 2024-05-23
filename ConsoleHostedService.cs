@@ -8,7 +8,7 @@ internal sealed class ConsoleHostedService : IHostedService
 {
     private readonly ILogger _logger;
     private readonly IHostApplicationLifetime _appLifetime;
-    private FileUploader.FileUploader _fileUploader;
+    private FileUploader.AppTools.FileUploader _fileUploader;
     private CancellationTokenSource _cancellationTokenSource; // Declare at the class level
 
     private Task? _applicationTask;
@@ -17,7 +17,7 @@ internal sealed class ConsoleHostedService : IHostedService
     public ConsoleHostedService(
         ILogger<ConsoleHostedService> logger,
         IHostApplicationLifetime appLifetime,
-        FileUploader.FileUploader fileUploader)
+        FileUploader.AppTools.FileUploader fileUploader)
     {
         _logger = logger;
         _appLifetime = appLifetime;
