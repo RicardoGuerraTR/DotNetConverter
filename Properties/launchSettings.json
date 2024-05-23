@@ -1,0 +1,23 @@
+{
+  "profiles": {
+    "WSL": {
+      "commandName": "WSL2",
+      "environmentVariables": {
+        "APP_MODE": "LOCAL"
+      },
+      "distributionName": ""
+    },
+    "FileUploader_LOCAL": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "APP_MODE": "LOCAL"
+      }
+    },
+    "FileUploader_AWS": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "APP_MODE": "AWS"
+      }
+    }
+  }
+}
